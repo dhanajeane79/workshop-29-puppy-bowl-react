@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useNavigate, useParams } from "react-router-dom";
@@ -16,7 +17,7 @@ export default function SinglePlayer({ APIURL }) {
                     method: 'DELETE'
                 });
             const result = await response.json();
-           
+            navigate(-1);
         } catch (error) {
 console.log(error);
         }
@@ -34,7 +35,7 @@ console.log(error);
             }
         }
         fetchSinglePlayer();
-    }, [APIURL, id, player])
+    }, [APIURL, id])
 
     if (player) {
         return (
@@ -48,7 +49,7 @@ console.log(error);
                 <p><strong>Updated at:</strong> {player.updatedAt}</p>
                 <p><strong>Team ID:</strong> {player.teamId}</p>
                 <p><strong>Cohort ID:</strong> {player.cohortId}</p>
-                
+                <button onClick={handleClick}>Remove Player</button>
                 {console.log(id)}
             </div>
         )
