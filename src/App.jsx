@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import AllPlayers from './Components/AllPlayers'
+import NavBar from './Components/NavBar'
 
 
 export default function App() {
@@ -10,11 +11,12 @@ export default function App() {
   const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}/`;
 
   return (
-      <>
-        <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
-          <Route path="/players" element={<AllPlayers APIURL={APIURL} />} />
-        </Routes>
-      </>
-    )
-  }
+    <>
+     <NavBar />
+      <Routes>
+        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/players" element={<AllPlayers APIURL={APIURL} />} />
+      </Routes>
+    </>
+  )
+}
