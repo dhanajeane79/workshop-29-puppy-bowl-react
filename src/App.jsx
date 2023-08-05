@@ -4,6 +4,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import AllPlayers from './Components/AllPlayers'
 import NavBar from './Components/NavBar'
+import SinglePlayer from './Components/SinglePlayer'
 
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<h1>Home</h1>} />
         <Route path="/players" element={<AllPlayers APIURL={APIURL} />} />
+        <Route path="/players/:id" element={<SinglePlayer APIURL={APIURL} />} />
       </Routes>
     </>
   )
