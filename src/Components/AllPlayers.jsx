@@ -2,10 +2,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AllPlayers({ APIURL }) {
   const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     async function fetchAllPlayers() {
@@ -20,7 +23,7 @@ export default function AllPlayers({ APIURL }) {
       }
     }
     fetchAllPlayers();
-  }, [APIURL]);
+  }, []);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -32,9 +35,10 @@ export default function AllPlayers({ APIURL }) {
       {players.map((player) => (
         <div className="PlayerCard" key={player.id}>
           <p>{player.name}</p>
-          <button>Details</button>
+          <button onClick={() => navigate(`/players/${player.id}`)}>Details</button>
         </div>
       ))}
     </div>
   );
+  
 }
