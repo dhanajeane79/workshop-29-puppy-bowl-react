@@ -48,7 +48,7 @@ console.log(error);
                 <p><strong>Updated at:</strong> {player.updatedAt}</p>
                 <p><strong>Team ID:</strong> {player.teamId}</p>
                 <p><strong>Cohort ID:</strong> {player.cohortId}</p>
-                <button onClick={handleClick}>Remove Player</button>
+                
                 {console.log(id)}
             </div>
         )
