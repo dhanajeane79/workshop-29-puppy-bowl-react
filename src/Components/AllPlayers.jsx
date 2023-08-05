@@ -30,8 +30,9 @@ export default function AllPlayers({ APIURL }) {
     <div>
       <h1>List of Players</h1>
       {players.map((player) => (
-        <div key={player.id}>
+        <div className="PlayerCard" key={player.id}>
           <p>{player.name}</p>
+          <button>Details</button>
         </div>
       ))}
     </div>
