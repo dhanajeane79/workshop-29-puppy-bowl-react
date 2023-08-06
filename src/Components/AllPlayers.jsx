@@ -40,20 +40,28 @@ export default function AllPlayers({ APIURL }) {
   return (
     <div>
       <h1>List of Players</h1>
+      {/* Search Bar */}
       <input
         type="text"
         placeholder="Search players..."
         value={search}
         onChange={handleSearchChange}
       />
-      {filteredPlayers.map((player) => (
-        <div className="PlayerCard" key={player.id}>
-          <p>{player.name}</p>
-          <button onClick={() => navigate(`/players/${player.id}`)}>
-            Details
-          </button>
+      {filteredPlayers.length === 0 ? (
+        <p>No players found.</p>
+      ) : (
+        // Loop through the filteredPlayers using a for loop
+        <div>
+          {filteredPlayers.map((player) => (
+            <div className="PlayerCard" key={player.id}>
+              <p><img alt="image of a puppy" src={`${player.imageUrl}`} /></p>
+              <p>{player.name}</p>
+              <p>{player.name}</p>
+              <button onClick={() => navigate(`/players/${player.id}`)}>Details</button>
+            </div>
+          ))}
         </div>
-      ))}
+      )}
     </div>
   );
 }
