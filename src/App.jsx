@@ -8,6 +8,8 @@ import AllPlayers from './Components/AllPlayers'
 import NavBar from './Components/NavBar'
 import SinglePlayer from './Components/SinglePlayer'
 import NewPlayerForm from './Components/NewPlayerForm'
+import BreedImage from './Components/BreedImage'
+
 
 
 export default function App() {
