@@ -121,7 +121,7 @@ export default function NewPlayerForm({ APIURL }) {
       <button type="submit" onClick={() => navigate(-1)}>
         Submit
       </button>
-      <BreedImage breed={breed} /> {/* Use the BreedImage component */}
+      
       <label>
         Image URL:
         <input
@@ -132,6 +132,7 @@ export default function NewPlayerForm({ APIURL }) {
           readOnly
         />
       </label>
+      <BreedImage breed={breed} /> {/* Use the BreedImage component */}
     </form>
   );
 }
