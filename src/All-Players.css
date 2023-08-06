@@ -24,3 +24,10 @@ img {
     max-height: 250px;
     min-height: 250px;
   }
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    margin-bottom: 10px;
+  }
