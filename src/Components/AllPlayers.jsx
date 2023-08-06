@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 export default function AllPlayers({ APIURL }) {
   const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
-
 
   useEffect(() => {
     async function fetchAllPlayers() {
@@ -25,6 +25,14 @@ export default function AllPlayers({ APIURL }) {
     fetchAllPlayers();
   }, []);
 
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const filteredPlayers = players.filter((player) =>
+    player.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -32,13 +40,20 @@ export default function AllPlayers({ APIURL }) {
   return (
     <div>
       <h1>List of Players</h1>
-      {players.map((player) => (
+      <input
+        type="text"
+        placeholder="Search players..."
+        value={search}
+        onChange={handleSearchChange}
+      />
+      {filteredPlayers.map((player) => (
         <div className="PlayerCard" key={player.id}>
           <p>{player.name}</p>
-          <button onClick={() => navigate(`/players/${player.id}`)}>Details</button>
+          <button onClick={() => navigate(`/players/${player.id}`)}>
+            Details
+          </button>
         </div>
       ))}
     </div>
   );
-  
 }
