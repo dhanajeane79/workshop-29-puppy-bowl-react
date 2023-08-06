@@ -17,7 +17,7 @@ const BreedImage = ({ breed }) => {
 pit: "https://discovery.sndimg.com/content/dam/images/discovery/editorial/shows/p/puppybowl/2022/meet-the-players/headshots/Copy%20of%20Banjo_EWF_2864.jpg.rend.hgtvcom.966.966.suffix/1641528996495.jpeg",
 bigPoodle: "https://discovery.sndimg.com/content/dam/images/discovery/editorial/shows/p/puppybowl/2022/meet-the-players/headshots/Copy%20of%20Benny_EWF_2805.jpg.rend.hgtvcom.966.966.suffix/1641528997533.jpeg",
 staffordshire: "https://discovery.sndimg.com/content/dam/images/discovery/editorial/shows/p/puppybowl/2022/meet-the-players/headshots/Copy%20of%20Billie_EWF_1116.jpg.rend.hgtvcom.966.966.suffix/1641528998854.jpeg",
-
+goldenPup: "https://discovery.sndimg.com/content/dam/images/discovery/editorial/shows/p/puppybowl/2022/meet-the-players/headshots/Copy%20of%20Brady_EWF_0158.jpg.rend.hgtvcom.966.966.suffix/1641529001772.jpeg",
     
     
     
