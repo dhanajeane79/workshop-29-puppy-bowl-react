@@ -4,6 +4,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import BreedImage from "./BreedImage";
 
 export default function SinglePlayer({ APIURL }) {
     const navigate = useNavigate();
@@ -41,7 +42,7 @@ console.log(error);
         return (
             <div>
                 <h1>{player.name}</h1>
-                <p><img alt="image of a puppy" src={`${player.imageUrl}`} /></p>
+                <BreedImage breed={player.breed} />
                 <p><strong>ID:</strong> {player.id}</p>
                 <p><strong>Breed:</strong> {player.breed}</p>
                 <p><strong>Status:</strong> {player.status}</p>
