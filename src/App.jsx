@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import './App.css'
 import './NavBar.css'
-import './AllPlayers.css'
+import './All-Players.css'
 import { Routes, Route } from 'react-router-dom'
 import AllPlayers from './Components/AllPlayers'
 import NavBar from './Components/NavBar'
