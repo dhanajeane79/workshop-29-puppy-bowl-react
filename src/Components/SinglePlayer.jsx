@@ -35,7 +35,7 @@ console.log(error);
             }
         }
         fetchSinglePlayer();
-    }, [APIURL, id])
+    }, [])
 
     if (player) {
         return (

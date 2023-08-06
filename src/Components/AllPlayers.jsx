@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
@@ -8,8 +9,21 @@ export default function AllPlayers({ APIURL }) {
   const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
+  async function handleClick(playerId) {
+    try {
+      const response = await fetch(`${APIURL}players/${playerId}/`, {
+        method: 'DELETE'
+      });
+      const result = await response.json();
+      // Assuming the deletion was successful, update the players list in the state
+      setPlayers(prevPlayers => prevPlayers.filter(player => player.id !== playerId));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+        
   useEffect(() => {
     async function fetchAllPlayers() {
       try {
@@ -23,7 +37,7 @@ export default function AllPlayers({ APIURL }) {
       }
     }
     fetchAllPlayers();
-  }, []);
+  }, [APIURL]); 
 
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
@@ -57,7 +71,10 @@ export default function AllPlayers({ APIURL }) {
               <p><img alt="image of a puppy" src={`${player.imageUrl}`} /></p>
               <p>{player.name}</p>
               <p>{player.name}</p>
-              <button onClick={() => navigate(`/players/${player.id}`)}>Details</button>
+              <div className= "button-container">
+              <button className= "detailsButton" onClick={() => navigate(`/players/${player.id}`)}>Details</button>
+              <button className="removeButton" onClick={() => handleClick(player.id)}>Remove Player</button>
+              </div>
             </div>
           ))}
         </div>
