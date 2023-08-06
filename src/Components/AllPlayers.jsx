@@ -4,6 +4,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import BreedImage from "./BreedImage";
 
 export default function AllPlayers({ APIURL }) {
   const [players, setPlayers] = useState([]);
@@ -68,8 +69,9 @@ export default function AllPlayers({ APIURL }) {
         <div className= "allPlayersContainer">
           {filteredPlayers.map((player) => (
             <div className="playerCard" key={player.id}>
-              <p><img alt="image of a puppy" src={`${player.imageUrl}`} /></p>
-              <p>{player.name}</p>
+                <p>{player.name}</p>
+                <BreedImage breed={player.breed} />
+              
               <p>{player.name}</p>
               <div className= "button-container">
               <button className= "detailsButton" onClick={() => navigate(`/players/${player.id}`)}>Details</button>
