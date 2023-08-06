@@ -50,10 +50,10 @@ export default function AllPlayers({ APIURL }) {
       {filteredPlayers.length === 0 ? (
         <p>No players found.</p>
       ) : (
-        // Loop through the filteredPlayers using a for loop
-        <div>
+        
+        <div className= "allPlayersContainer">
           {filteredPlayers.map((player) => (
-            <div className="PlayerCard" key={player.id}>
+            <div className="playerCard" key={player.id}>
               <p><img alt="image of a puppy" src={`${player.imageUrl}`} /></p>
               <p>{player.name}</p>
               <p>{player.name}</p>
