@@ -6,23 +6,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 import BreedImage from "./BreedImage";
 
+
 export default function SinglePlayer({ APIURL }) {
     const navigate = useNavigate();
     const { id } = useParams();
     const [player, setPlayer] = useState(null);
 
-    async function handleClick() {
-        try {
-            const response = await fetch(`${APIURL}players/${id}/`,
-                {
-                    method: 'DELETE'
-                });
-            const result = await response.json();
-            navigate(-1);
-        } catch (error) {
-console.log(error);
-        }
-    }
+    
 
     useEffect(() => {
         async function fetchSinglePlayer() {
@@ -40,9 +30,13 @@ console.log(error);
 
     if (player) {
         return (
-            <div>
-                <h1>{player.name}</h1>
-                <BreedImage breed={player.breed} />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className= "single-Card">
+                <h1 style={{ display: 'flex', justifyContent: 'center' }}>{player.name}</h1>
+
+                <div style={{ textAlign: 'center' }}>
+                        <BreedImage breed={player.breed} />
+                    </div>
                 <p><strong>ID:</strong> {player.id}</p>
                 <p><strong>Breed:</strong> {player.breed}</p>
                 <p><strong>Status:</strong> {player.status}</p>
@@ -50,11 +44,12 @@ console.log(error);
                 <p><strong>Updated at:</strong> {player.updatedAt}</p>
                 <p><strong>Team ID:</strong> {player.teamId}</p>
                 <p><strong>Cohort ID:</strong> {player.cohortId}</p>
-                <button onClick={handleClick}>Remove Player</button>
+                <button className= "close-button" onClick={() => navigate('/players')}>Close</button>
                 {console.log(id)}
+                </div>
             </div>
         )
     } else {
         return null;
-    }
+    } 
 }

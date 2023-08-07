@@ -18,3 +18,97 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.welcome-paragraph {
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(80px);
+
+}
+
+.meet-puppers {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 30px;
+  color: #a79494;
+
+
+}
+
+
+.add-a-pup {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 30px;
+  color: #333333;
+
+}
+
+.click-here-button {
+  background-color: #295556;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background-color 0.3s;
+}
+
+.click-here-button:hover {
+  background-color: #12dbdb;
+}
+
+.meet-and-pic,
+.roster-and-button {
+  backdrop-filter: blur(80px);
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+}
+
+.welcome-header {
+  font-size: 40px;
+
+}
+
+.form-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 500px;
+  background-color: #272928;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.single-Card {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  background-color: #272928;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h3 {
+  font-size: 25px;
+
+}

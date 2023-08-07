@@ -54,25 +54,27 @@ export default function AllPlayers({ APIURL }) {
 
   return (
     <div>
-      <h1>List of Players</h1>
+        <div className= "search">
+      <h1>Meet the Pups!</h1>
       {/* Search Bar */}
-      <input
+      <input className= "search-bar"
         type="text"
         placeholder="Search players..."
         value={search}
         onChange={handleSearchChange}
       />
+      </div>
       {filteredPlayers.length === 0 ? (
         <p>No players found.</p>
       ) : (
         
         <div className= "allPlayersContainer">
           {filteredPlayers.map((player) => (
-            <div className="playerCard" key={player.id}>
-                <p>{player.name}</p>
+            <div className="playerCard playerCardHover" key={player.id}> 
+                <p className= "name">{player.name}</p>
                 <BreedImage breed={player.breed} />
               
-              <p>{player.name}</p>
+              <p>Breed: {player.breed}</p> 
               <div className= "button-container">
               <button className= "detailsButton" onClick={() => navigate(`/players/${player.id}`)}>Details</button>
               <button className="removeButton" onClick={() => handleClick(player.id)}>Remove Player</button>
