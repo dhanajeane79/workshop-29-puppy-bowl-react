@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react'
-import './App.css'
 import './NavBar.css'
 import './All-Players.css'
 import './AddPlayerForm.css'

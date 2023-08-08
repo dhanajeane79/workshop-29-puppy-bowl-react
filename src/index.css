@@ -1,3 +1,11 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  align-content: center;
+  
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,34 +27,35 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* Welcome paragraph and heading styles */
 .welcome-paragraph {
   font-size: 25px;
   padding: 10px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 50px;
   border-radius: 20px;
   backdrop-filter: blur(80px);
-
 }
 
-.meet-puppers {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 30px;
-  color: #a79494;
-
-
+.welcome-header {
+  font-size: 40px;
 }
 
-
+.meet-puppers,
 .add-a-pup {
   font-size: 24px;
   font-weight: bold;
   padding: 30px;
-  color: #333333;
-
 }
 
+.meet-puppers {
+  color: #a79494;
+}
+
+.add-a-pup {
+  color: #333333;
+}
+
+/* Button styles */
 .click-here-button {
   background-color: #295556;
   color: #fff;
@@ -62,8 +71,11 @@ body {
   background-color: #12dbdb;
 }
 
+/* Containers styles */
 .meet-and-pic,
-.roster-and-button {
+.roster-and-button,
+.form-container,
+.single-Card {
   backdrop-filter: blur(80px);
   width: 500px;
   margin: 20px auto;
@@ -73,34 +85,13 @@ body {
   border-radius: 20px;
 }
 
-.welcome-header {
-  font-size: 40px;
 
-}
 
-.form-container {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  width: 500px;
-  background-color: #272928;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  align-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
+/* Single card styles */
 .single-Card {
   display: flex;
-  width: 500px;
   justify-content: center;
   background-color: #272928;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   align-content: center;
@@ -108,7 +99,15 @@ body {
   flex-wrap: wrap;
 }
 
+/* Heading styles */
 h3 {
   font-size: 25px;
+}
 
+img {
+  max-width: 250px; 
+  max-height: 250px;
+  min-height: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }

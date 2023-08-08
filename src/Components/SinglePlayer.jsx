@@ -28,13 +28,15 @@ export default function SinglePlayer({ APIURL }) {
         fetchSinglePlayer();
     }, [])
 
+    
+
     if (player) {
         return (
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div className= "single-Card">
                 <h1 style={{ display: 'flex', justifyContent: 'center' }}>{player.name}</h1>
 
-                <div style={{ textAlign: 'center' }}>
+                <div >
                         <BreedImage breed={player.breed} />
                     </div>
                 <p><strong>ID:</strong> {player.id}</p>
@@ -44,8 +46,10 @@ export default function SinglePlayer({ APIURL }) {
                 <p><strong>Updated at:</strong> {player.updatedAt}</p>
                 <p><strong>Team ID:</strong> {player.teamId}</p>
                 <p><strong>Cohort ID:</strong> {player.cohortId}</p>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <button className= "close-button" onClick={() => navigate('/players')}>Close</button>
                 {console.log(id)}
+                </div>
                 </div>
             </div>
         )

@@ -2,51 +2,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px);
+    gap: 20px;
 
 }
 
 .playerCard {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* background: linear-gradient(to bottom, rgb(51, 51, 95), rgb(5, 64, 5));  */
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 25px;
     margin: 10px;
     width: 300px;
-    justify-content: flex-start;
-
-}
-
-img {
-    max-width: 250px;
-    max-height: 250px;
-    min-height: 250px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-  }
-
-  .button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    margin-bottom: 10px;
-  }
-
-  /* AllPlayers.css */
-.allPlayersContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.playerCard {
-display: flex;
-    justify-content: center; 
-    background-color: #272928; 
+    justify-content: center;
+    background-color: #272928;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
@@ -55,72 +21,92 @@ display: flex;
     align-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-}
+}  
 
+.playerCard img { 
+    border-radius: 5px;
+    margin-bottom: 10px;
+}  
 
-.playerCard img {
- 
-  border-radius: 5px;
-  margin-bottom: 10px;
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .playerCard p {
-  margin: 0;
-  font-size: 20px;
-  font-weight: bold;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.close-button,
 .detailsButton,
-.removeButton {
-  flex: 1;
-  padding: 5px 10px;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 1px solid #8ba4a4; 
+.removeButton,
+.submit {
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #8ba4a4;
+    transition: background-color 0.3s;
 }
 
 .close-button {
     background-color: #295556;
     color: #fff;
-    margin-right: 5px; 
+    margin: 5px;
+    width: 100px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px; 
+    cursor: pointer;
+    border: 1px solid #8ba4a4; 
+    transition: background-color 0.3s;
 }
 
-.detailsButton {
-  background-color: #295556;
-  color: #fff;
-  margin-right: 5px; 
-}
-
-.removeButton {
-  background-color: #324989; 
-  color: #fff;
-}
-
-.search {
-    text-align: center; 
-    margin-bottom: 20px;
-}
- p.name {
-font-size: 25px;
-color: rgb(174, 166, 59); 
- }
-
- .playerCard:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+.close-button:hover { 
+    background-color: #1e0e36; /* Change the background color on hover */
   }
 
-  .search-bar {
+.detailsButton {
+    background-color: #295556;
+    color: #fff;
+    margin-right: 5px;
+    
+}
+
+.detailsButton:hover {
+    background-color: #6b14a6; /* Change the background color on hover */
+  }
+
+.removeButton {
+    background-color: #324989;
+    color: #fff;
+}
+
+.removeButton:hover {
+    background-color: #12dbdb; /* Change the background color on hover */
+  }
+
+.search {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p.name {
+    font-size: 25px;
+    color: rgb(174, 166, 59);
+}
+
+.playerCard:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.search-bar {
 
     width: 400px;
     height: 30px;
-  }
- 
+}
